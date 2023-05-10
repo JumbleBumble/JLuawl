@@ -39,9 +39,19 @@ if api_key:
 else:
     print("No API key found.")
 
-icon_path = os.path.join(folder_path, 'JLuawlFav.ico')
-if icon_path:
-    root.iconbitmap(icon_path)
+image_path = os.path.join(folder_path, 'JLuawlFav.ico')
+if not os.path.exists(image_path):
+    with urllib.request.urlopen('https://jumblescripts.com/JLuawlFav.ico') as u:
+                    raw_data = u.read()
+                    im = Image.open(io.BytesIO(raw_data))
+                    im.save(image_path)
+
+            
+
+           
+
+if os.path.exists(image_path):
+    root.iconbitmap(image_path)
 
 class MyFrame(ctk.CTkScrollableFrame):
     def __init__(self, master,table_list, **kwargs):
