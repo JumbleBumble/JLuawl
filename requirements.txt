@@ -1,0 +1,8 @@
+customtkinter
+tkinter
+luawl
+os
+json
+urllib
+PIL
+io
