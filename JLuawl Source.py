@@ -395,7 +395,7 @@ IDentry.grid(column = 0, row = 1,columnspan=2,pady=12,sticky="n")
 #Displays WhitelistInfoWin
 Lookupbutton = ctk.CTkButton(root,height=70, text="Whitelist information",text_color=ButtonTextColor,fg_color=ButtonFGColor,border_color=ButtonBCColor,border_width=ButtonBW,hover_color='grey', command = Lookup)
 Lookupbutton.grid(column = 0, row = 1,pady=15,padx=15,sticky="nsew")
-ScriptID = None
+
 
 #Opens WhiteListWindow which contains whitelist options
 Whitelistbutton = ctk.CTkButton(root,height=70, text="Whitelist",text_color=ButtonTextColor,fg_color=ButtonFGColor,border_color=ButtonBCColor,border_width=ButtonBW,hover_color='grey', command = lambda: WhiteListWindow())
